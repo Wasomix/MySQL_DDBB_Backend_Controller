@@ -17,8 +17,6 @@
  */
 
 package src.sfc.mysql;
-//package ddbb;
-
 
 //STEP 1. Import required packages
 import java.sql.*;
@@ -359,8 +357,6 @@ public class MySQLManagement {
             throws SQLException {
         String sqlStatement = "ALTER TABLE";       
         String addKeyword = "ADD";
-        //String columnToInsert = "Email";
-        //String dataType = "varchar(255)";
         String sqlInstruction = sqlStatement + blankSpace_ + tableName_ + 
                 blankSpace_ + addKeyword + blankSpace_ + columnToInsert + 
                 blankSpace_ + columnDataType + FINAL_SEMICONLON_;
@@ -373,7 +369,6 @@ public class MySQLManagement {
             throws SQLException{
         String sqlStatement = "ALTER TABLE";       
         String dropKeyword = "DROP";
-        //String columnToDelete = "Email";
         String sqlInstruction = sqlStatement + blankSpace_ + tableName_ + 
                 blankSpace_ + dropKeyword + blankSpace_ + columnToDelete + 
                 blankSpace_ + FINAL_SEMICONLON_;
@@ -391,7 +386,6 @@ public class MySQLManagement {
         String sqlInstruction = sqlStatement + blankSpace_ + tableName_ + 
                 blankSpace_ + whereKeyword + blankSpace_ + idColumnKeyword + 
                 equal + rowIdToDelete + FINAL_SEMICONLON_;
-//        String sqlInstruction = "DELETE FROM TABLE_TEST WHERE id=101";
         ExecuteSQLInstruction( sqlInstruction );    
         System.out.println("Raw deleted successfully...");           
     }
